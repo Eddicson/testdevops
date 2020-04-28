@@ -53,12 +53,9 @@ TEST DEVOPS
           
      Verifique y pruebe el motor Docker CE
           de prueba usemos: 
-               #docker run hello-world
-               
-    ! [imagen]_(https://www.linuxtechi.com/wp-content/uploads/2019/12/hello-world-container-centos8.png)
-     
-    
-       
+                #docker run hello-world
+  
+   ! [IMAGEN]_(https://raw.linuxtechi.com/wp-content/uploads/2019/12/hello-world-container-centos8.png)    
        
          
   
