@@ -143,9 +143,9 @@ Una vez que Kubernetes se haya inicializado correctamente, debe permitir que su 
          
 ejecute para usuario habilitado en sudo:
 
-   $mkdir -p $HOME/.kube 
-   $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-   $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+      $mkdir -p $HOME/.kube 
+      $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+      $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
           
   Ahora confirme que el comando kubectl está activado:
           #kubectl get node
