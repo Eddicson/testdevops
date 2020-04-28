@@ -56,7 +56,7 @@ TEST DEVOPS
                 #docker run hello-world
   Debera mostrar un mensaje como el de acontinuacion:
   
-       Hello from Docker!
+  (  Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
 To generate this message, Docker took the following steps:
@@ -75,7 +75,7 @@ Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/
 
 For more examples and ideas, visit:
- https://docs.docker.com/get-started/
+ https://docs.docker.com/get-started/)
                                                                                                           
                                                                                                           
   
@@ -130,20 +130,22 @@ For more examples and ideas, visit:
           
   A continuación, copie el siguiente comando y guárdelo en algún lugar, ya que este comando se ejecuta tambien en los nodos de trabajo
   
-          #kubeadm join 192.168.162.47:6443 --token nu06lu.xrsux0ss0ixtnms5  --discovery-token-ca-cert-hash ha256: f996ea35r4353d342fdea2997a1cf8caeddafd6d4360d606dbc8231468778hj
+ #kubeadm join 192.168.162.47:6443 --token nu06lu.xrsux0ss0ixtnms5  --discovery-token-ca-cert-hash ha256: f996ea35r4353d342fdea2997a1cf8caeddafd6d4360d606dbc8231468778hj
           
           
 Una vez que Kubernetes se haya inicializado correctamente, debe permitir que su usuario comience a usar el clúster. En nuestro escenario, utilizaremos el usuario root. También puede iniciar el clúster utilizando sudo user como se muestra.
 
-ejecute para root:
-          # mkdir -p $HOME/.kube 
-          # cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
-          # chown $(id -u):$(id -g) $HOME/.kube/config
+ ejecute para root:
+ 
+   # mkdir -p $HOME/.kube 
+   # cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+   # chown $(id -u):$(id -g) $HOME/.kube/config
          
 ejecute para usuario habilitado en sudo:
-          $mkdir -p $HOME/.kube 
-          $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
-          $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+   $mkdir -p $HOME/.kube 
+   $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
           
   Ahora confirme que el comando kubectl está activado:
           #kubectl get node
@@ -162,18 +164,18 @@ ejecute para usuario habilitado en sudo:
    
    Estos comandos serán importantes para obtener la configuración de la red de pod.
    
-    # export kubever=$(kubectl version | base64 | tr -d '\n')
-    # kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+   #export kubever=$(kubectl version | base64 | tr -d '\n')
+   #kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
     
-    nos debe mostrat esto:
+        nos debe mostrar esto:
     
-    "     [root@master etc]# kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
-          serviceaccount/weave-net created
-          clusterrole.rbac.authorization.k8s.io/weave-net created
-          clusterrolebinding.rbac.authorization.k8s.io/weave-net created
-          role.rbac.authorization.k8s.io/weave-net created
-          rolebinding.rbac.authorization.k8s.io/weave-net created
-          daemonset.apps/weave-net created                                                "
+   # kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+   serviceaccount/weave-net created
+   clusterrole.rbac.authorization.k8s.io/weave-net created
+   clusterrolebinding.rbac.authorization.k8s.io/weave-net created
+   role.rbac.authorization.k8s.io/weave-net created
+   rolebinding.rbac.authorization.k8s.io/weave-net create
+   daemonset.apps/weave-net created                                                
           
    
    y solo nos queda verificar de nuenvo el estatus del los nodos
