@@ -137,9 +137,9 @@ Una vez que Kubernetes se haya inicializado correctamente, debe permitir que su 
 
  ejecute para root:
  
-   # mkdir -p $HOME/.kube 
-   # cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
-   # chown $(id -u):$(id -g) $HOME/.kube/config
+      # mkdir -p $HOME/.kube 
+      # cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+      # chown $(id -u):$(id -g) $HOME/.kube/config
          
 ejecute para usuario habilitado en sudo:
 
@@ -169,13 +169,13 @@ ejecute para usuario habilitado en sudo:
     
         nos debe mostrar esto:
     
-   # kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
-   serviceaccount/weave-net created
-   clusterrole.rbac.authorization.k8s.io/weave-net created
-   clusterrolebinding.rbac.authorization.k8s.io/weave-net created
-   role.rbac.authorization.k8s.io/weave-net created
-   rolebinding.rbac.authorization.k8s.io/weave-net create
-   daemonset.apps/weave-net created                                                
+    #kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+    serviceaccount/weave-net created
+    clusterrole.rbac.authorization.k8s.io/weave-net created
+    clusterrolebinding.rbac.authorization.k8s.io/weave-net created
+    role.rbac.authorization.k8s.io/weave-net created
+     rolebinding.rbac.authorization.k8s.io/weave-net create
+     daemonset.apps/weave-net created                                                
           
    
    y solo nos queda verificar de nuenvo el estatus del los nodos
