@@ -16,7 +16,7 @@ TEST DEVOPS
            
            #ping 192.168.162.47
            
-     2.-   desactive Selinux , ya que esto es necesario para permitir que los contenedores accedan al sistema de archivos host, que es              necesario para las redes de pod y otros servicios.
+     2.- Desactive Selinux , ya que esto es necesario para permitir que los contenedores accedan al sistema de archivos host, que es              necesario para las redes de pod y otros servicios.  
      
             #setenforce 0
            
@@ -56,7 +56,7 @@ TEST DEVOPS
                 #docker run hello-world
   Debera mostrar un mensaje como el de acontinuacion:
   
-      " Hello from Docker!
+       Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
 To generate this message, Docker took the following steps:
@@ -76,7 +76,7 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
-                                                                                                          "
+                                                                                                          
                                                                                                           
   
       Instalar el Docker Compose
@@ -248,7 +248,7 @@ ejecute para usuario habilitado en sudo:
      debe mostrarles algo como esto:
      
      
-  "      [root@master ansible]# ansible -m ping "webservers"
+        [root@master ansible]# ansible -m ping "webservers"
           192.168.162.131 | SUCCESS => {
           "ansible_facts": {
           "discovered_interpreter_python": "/usr/libexec/platform-python"
@@ -263,7 +263,7 @@ ejecute para usuario habilitado en sudo:
            },
            "changed": false,
            "ping": "pong"
-          }                                                                     "
+          }                                                                     
 
 
     Use el siguiente comando ansible para enumerar todos los hosts del archivo de inventario:
